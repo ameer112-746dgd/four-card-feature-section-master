@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Card Feature Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+<style>
+    /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+/* Header */
+header h2 {
+    font-size: 15px;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    color: hsl(234, 12%, 34%);
+}
+
+header h1 span {
+    color: hsl(212, 86%, 64%);
+}
+
+header p {
+    color: hsl(212, 6%, 44%);
+    max-width: 500px;
+    margin: 10px auto 40px;
+    font-size: 15px;
+}
+
+/* Cards Layout */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Middle Cards Layout */
+.middle-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    height: 180px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Heading */
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+.card p {
+    color: hsl(212, 6%, 44%);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Card Icons */
+.card img {
+    width: 40px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Colors for each card */
+.supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+    transform: translateY(50%);
+}
+
+.team-builder {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+    transform: translateY(50%);
+}
+
+/* Footer */
+.attribution {
+    margin-top: 50px;
+    font-size: 11px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .supervisor,
+    .calculator {
+        transform: translateY(0);
+    }
+}
+</style>
+    <div class="container">
+        <header>
+            <h2>Reliable, efficient delivery</h2>
+            <h1>Powered by <span>Technology</span></h1>
+            <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful.</p>
+        </header>
+
+        <div class="cards">
+            <div class="card supervisor">
+                <h3>Supervisor</h3>
+                <p>Monitors activity to identify project roadblocks</p>
+                <img src="images/icon-supervisor.svg" alt="Supervisor Icon">
+            </div>
+            <div class="middle-cards">
+                <div class="card team-builder">
+                    <h3>Team Builder</h3>
+                    <p>Scans our talent network to create the optimal team for your project</p>
+                    <img src="images/icon-team-builder.svg" alt="Team Builder Icon">
+                </div>
+                <div class="card karma">
+                    <h3>Karma</h3>
+                    <p>Regularly evaluates our talent to ensure quality</p>
+                    <img src="images/icon-karma.svg" alt="Karma Icon">
+                </div>
+            </div>
+            <div class="card calculator">
+                <h3>Calculator</h3>
+                <p>Uses data from past projects to provide better delivery estimates</p>
+                <img src="images/icon-calculator.svg" alt="Calculator Icon">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Atobatele Ameer Omogbolahan</a>.
+        </p>
+    </footer>
+</body>
+</html>
